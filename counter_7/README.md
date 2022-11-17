@@ -44,7 +44,7 @@ Perbedaan utama antara `const` dengan `final` terdapat pada inialisasi nilai dar
 - https://docs.flutter.dev/development/ui/widgets
 - https://bahasakoding.com/mengenal-widget-icon-di-flutter/
 
-# Tugas 7
+# Tugas 8
 
 ### Jelaskan perbedaan `Navigator.push` dan `Navigator.pushReplacement`.
 Pada `Navigator.push`, method push akan melakukan push terhadap route yang diberikan ke navigator, sedangkan pada `Navigator.pushReplacement`, method pushReplacement akan mengganti route terkini dari navigator dengan melakukan push terhadap route baru dan membuang route sebelumnya setelah route baru tersebut masuk.
