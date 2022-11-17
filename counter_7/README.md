@@ -52,11 +52,11 @@ Pada `Navigator.push`, method push akan melakukan push terhadap route yang diber
 ### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 - Drawer: untuk menampilkan drawer yang menyediakan pilihan untuk pindah ka halaman lain
 - TextFormField: untuk menerima input teks dari form
-- Dropdownbutton: untuk menampilkan pilihan inpit yang berbentuk dropdown
+- Dropdownbutton: untuk menampilkan pilihan input yang berbentuk dropdown
 - Navigator: untuk pindah ke halaman lain
 - Form: untuk menerima input dari pengguna
 - Text: untuk menampilkan tulisan
-= ListTile: sebagai tempat untuk menampung widget lain
+- ListTile: sebagai tempat untuk menampung widget lain
 
 ### Sebutkan jenis-jenis *event* yang ada pada Flutter (contoh: `onPressed`).
 Beberapa contoh event yang ada pada flutter adalah sebagai berikut.
