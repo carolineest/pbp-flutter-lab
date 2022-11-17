@@ -43,3 +43,40 @@ Perbedaan utama antara `const` dengan `final` terdapat pada inialisasi nilai dar
 - https://belajarflutter.com/perbedaan-final-dan-const-pada-dart-dan-flutter/#:~:text=Perbedaan%20utama%20ada%20pada%20inialisasi,final%20tidak%20mengharuskan%20variabel%20memiliki
 - https://docs.flutter.dev/development/ui/widgets
 - https://bahasakoding.com/mengenal-widget-icon-di-flutter/
+
+# Tugas 7
+
+### Jelaskan perbedaan `Navigator.push` dan `Navigator.pushReplacement`.
+Pada `Navigator.push`, method push akan melakukan push terhadap route yang diberikan ke navigator, sedangkan pada `Navigator.pushReplacement`, method pushReplacement akan mengganti route terkini dari navigator dengan melakukan push terhadap route baru dan membuang route sebelumnya setelah route baru tersebut masuk.
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Drawer: untuk menampilkan drawer yang menyediakan pilihan untuk pindah ka halaman lain
+- TextFormField: untuk menerima input teks dari form
+- Dropdownbutton: untuk menampilkan pilihan inpit yang berbentuk dropdown
+- Navigator: untuk pindah ke halaman lain
+- Form: untuk menerima input dari pengguna
+- Text: untuk menampilkan tulisan
+= ListTile: sebagai tempat untuk menampung widget lain
+
+### Sebutkan jenis-jenis *event* yang ada pada Flutter (contoh: `onPressed`).
+Beberapa contoh event yang ada pada flutter adalah sebagai berikut.
+- `onPressed` : event akan terjadi ketika widget ditekan
+- `onTap` : event akan terjadi ketika widget di-tap
+- `onLongPress` : event akan terjadi ketika widget ditekan di tempat yang sama pada waktu lama
+- `onVerticalDragStart` : event yang akan terjadi ketika pointer melakukan kontak dengan layar dan bergerak secara vertikal
+- `onPanUpdate` : event yang akan terjadi ketika pointer yang sedang melakukan kontak dengan layar bergerak secara vertikal atau horizontal
+
+### Jelaskan bagaimana cara kerja `Navigator` dalam "mengganti" halaman dari aplikasi Flutter.
+Pada Flutter, navigation berbentuk seperti stack dari banyak halaman dimana halaman-halaman tersebut akan di-push dan di-pop. Ide dari implementasi push dan pop ini yang pada dasarnya digunakan untuk “mengganti” halaman dari aplikasi flutter. Pada `Navigator` , halaman yang terletak di paling atas stack yang terlihat di layar. Halaman yang terakhir dimasukkan adalah yang pertama dikeluarkan dari stack.
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Menambahkan drawer dalam sebuah file yang bernama `drawer.dart` terpisah
+2. Pada file `drawer.dart`, tambahkan tiga widget navigasi yang akan muncul pada hamburger menu dengan builder
+3. Membuat sebuah file baru bernama `form.dart` untuk meng-handle input user. Input yang diambil adalah judul, nominal, dan pilihan jenis. Sebagai tambahan, terdapat date picker untuk menambahkan elemen date. Terdapat juga button untuk menyimpan input.
+4. Menambahkan sebuah file baru bernama `showdata.dart` yang akan meng-handle halaman yang memunculkan data budget dan elemen date. Data tersebut dimasukkan ke dalam List dan ditampilkan menggunakan widget Card.
+
+#### Referensi:
+- https://api.flutter.dev/flutter/widgets/Navigator/pushReplacement.html
+- https://api.flutter.dev/flutter/widgets/Navigator/push.html
+- https://docs.flutter.dev/development/ui/advanced/gestures
+- https://www.appsdeveloperblog.com/handle-button-tap-event-in-flutter/#:~:text=The%20two%20most%20commonly%20used%20button%20events%20are%20onTap%20and%20onPressed
