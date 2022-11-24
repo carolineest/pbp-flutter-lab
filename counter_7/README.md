@@ -80,3 +80,31 @@ Pada Flutter, navigation berbentuk seperti stack dari banyak halaman dimana hala
 - https://api.flutter.dev/flutter/widgets/Navigator/push.html
 - https://docs.flutter.dev/development/ui/advanced/gestures
 - https://www.appsdeveloperblog.com/handle-button-tap-event-in-flutter/#:~:text=The%20two%20most%20commonly%20used%20button%20events%20are%20onTap%20and%20onPressed
+
+# Tugas 9
+
+### Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Ya, pengambilan data JSON tanpa membuat model terlebih dahulu dapat dilakukan. JSON merupakan sebuah object dalam notasi Javascript yang pada Dart merupakan ekuivalen dari Map. Namun, perlu diperhatikan bahwa pengambilan data JSON tanpa melakukan konversi ke dalam suatu model bukan merupakan best practice. Data JSON dikonversi ke dalam suatu model bertujuan untuk meminimalisir kesalahan pengambilan atau pengiriman data melalui request http yang akan ditampilkan kepada user.
+
+### Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Form: untuk menerima input dari pengguna
+- Text: untuk menampilkan tulisan
+- ListTile: sebagai tempat untuk menampung widget lain
+- Drawer: untuk menampilkan drawer yang menyediakan pilihan untuk pindah ka halaman lain
+- Container: sebagai container atau wadah untuk menampung widget lainnya
+- Scaffold: untuk mengatur struktur layout dengan implementasi material design
+- Padding: untuk merapikan widget dengan memberikan jarak antar widget
+
+### Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+- Buat sebuah function untuk request http dengan method `GET` secara asynchronous yang akan mengambil data ke pihak eksternal
+- Pada function yang sudah dibuat sebelumnya, lakukan parsing dengan `jsonDecode()` untuk mengubah response dalam bentuk String menjadi JSON
+- Konversikan object JSON ke dalam sebuah model object
+- Menggunakan widget `FutureBuilder` untuk menampilkan widget dengan snapshot data terkini yang sudah dikonversi menjadi sebuah object
+
+### Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Melakukan refactor file-file yang ada ke folder terpisah sesuai dengan jenisnya
+- Membuat file baru bernama `mywatchlist.dart` pada folder model yang akan berisi model untuk mywatchlist
+- Membuat file baru bernama `mywatchlist_page.dart` yang akan semua judul film pada pada endpoint JSON di Django Tugas 3 sebelumnya
+- Membuat navigasi dari setiap judul pada watchlist ke halaman detail film
+- Membuat file baru bernama `mywatchlist_data.dart` yang akan menampilkan data atau detail dari masing-masing film sesuai dengan judul yang dipilih. Pada bagian bawah dibuat juga sebuah tombol `Back` untuk kembali ke daftar judul film pada mywatchlist
+-  Menambahkan drawer pada page-page baru yang dibuat

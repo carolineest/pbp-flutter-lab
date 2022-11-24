@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
-import 'package:counter_7/form.dart';
-import 'package:counter_7/showdata.dart';
+import 'package:counter_7/page/form.dart';
+import 'package:counter_7/page/showdata.dart';
+import 'package:counter_7/page/mywatchlist_page.dart';
 
 Drawer buildDrawer(BuildContext context) {
   return Drawer(
@@ -22,7 +23,7 @@ Drawer buildDrawer(BuildContext context) {
         ListTile(
           title: const Text('Tambah Budget'),
           onTap: () {
-            // Route menu ke halaman form
+            // Route menu ke halaman form tambah budget
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => const MyFormPage()),
@@ -33,13 +34,25 @@ Drawer buildDrawer(BuildContext context) {
         ListTile(
           title: const Text('Data Budget'),
           onTap: () {
-            // Route menu ke halaman utama
+            // Route menu ke halaman data budget
             Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (context) => const ShowDataPage()),
             );
           },
         ),
+
+        ListTile(
+          title: const Text('My Watch List'),
+          onTap: () {
+            // Route menu ke halaman my watch list
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const WatchListPage()),
+            );
+          },
+        ),
+
       ],
     ),
   );
